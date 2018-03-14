@@ -1,0 +1,53 @@
+<p>Дано натуральное число n и целые числа a1, a2,..an. Определить есть ли 
+среди заданной последовательности чисел отрезки (непрерывные 
+последовательности), состоящие из полных квадратов. Если есть, то 
+подсчитать их количество и определить самый длинный из отрезков.</p>
+<%= form_tag  url_for(controller: :proxy, action: :output), method: 'get' do %>
+
+    <div class="form-group">
+      <%= label_tag("Введите числа: ") %>
+      <%= text_field_tag(:a1) %>
+    </div>
+
+    <fieldset class="form-group">
+
+      <legend>Выбор стороны рендеринга</legend>
+
+      <div class="form-check">
+
+        <label class="form-check-label">
+
+          <input type="radio" class="form-check-input" name="side" value="server" id="server-side" checked>
+          Рендеринг на стороне сервера этого приложения
+
+        </label>
+
+      </div>
+
+      <div class="form-check">
+
+        <label class="form-check-label">
+
+          <input type="radio" class="form-check-input" name="side" value="client" id="client-side">
+          Отображение сырого XML на стороне браузера
+
+        </label>
+
+      </div>
+
+      <div class="form-check">
+
+        <label class="form-check-label">
+
+          <input type="radio" class="form-check-input" name="side" value="client-with-xslt" id="client-side-xslt">
+          Рендеринг на стороне браузера с помощью XSLT
+
+        </label>
+
+      </div>
+
+    </fieldset>
+
+    <%= submit_tag 'Отправить', class: 'btn btn-primary' %>
+
+<% end %>

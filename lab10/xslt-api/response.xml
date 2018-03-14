@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <results type="array">
+    <result type="integer">9</result>
+    <result type="integer">4</result>
+    <result type="integer">36</result>
+  </results>
+  <all-arrays type="array">
+    <all-array type="array">
+      <all-array type="integer">16</all-array>
+      <all-array type="integer">25</all-array>
+    </all-array>
+    <all-array type="array">
+      <all-array type="integer">9</all-array>
+      <all-array type="integer">4</all-array>
+      <all-array type="integer">36</all-array>
+    </all-array>
+    <all-array type="array">
+      <all-array type="integer">9</all-array>
+    </all-array>
+  </all-arrays>
+  <counter type="integer">3</counter>
+</hash>

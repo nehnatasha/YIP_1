@@ -1,0 +1,2 @@
+class LrResult < ApplicationRecord
+end

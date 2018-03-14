@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lab8</title>
+	<style>
+		table {
+			border: solid 1px;
+		}
+		tr {
+			border: solid 1px;
+		}
+		th {
+			border: solid 1px;
+		}
+	</style>
+</head>
+<body>
+<h1>Lab9#view</h1>
+<p>Find me in app/views/lab9/view.html.erb</p>
+
+<table>
+	<tr>
+		<th>Самый длинный отрезок</th>
+		<th>Количество отрезков</th>
+		<th>Все отрезки</th>
+	</tr>
+	<tr>
+		<th id="result"><%= @result %></th>
+		<th id="counter"><%= @counter %></th>
+		<th id="all results"><%= @all_arrays %></th>
+	</tr>
+
+</table>
+
+<%= link_to "Назад", lab9_input_url %>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lr3</title>
+    <script>  
+        function CreateTree(elem) {
+            var Ch = elem.firstElementChild;//Присвоение переменной элемента
+            var ul = document.createElement('ul');//Cоздание списка
+            while (Ch) {
+                console.log(Ch.tagName);//Вывод элемента в консоль
+                var li = document.createElement('li');//Cоздание записи
+                li.innerHTML = Ch.tagName;//Заполнение записи названием тега
+                var sp = CreateTree(Ch);//Рекурсивный вызов функции построения древа
+                li.appendChild(sp);//Прикрепляет новую запись к li и заполняет её полученным элементом
+                ul.appendChild(li);//Добавляет запись в список
+                Ch = Ch.nextElementSibling;//Переход к следующему элементу 
+            }
+            elem.appendChild(ul);//Прикрепляет получившийся список к документу
+            return ul;//Возвращает запись
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" onclick="CreateTree(document.documentElement);" value="Построить древо" />
+    </form>
+    <div>
+        <div>
+            <div>
+                <p>Параграф в 3-х "&lt;div&gt;"</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
